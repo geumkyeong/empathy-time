@@ -64,6 +64,7 @@
 <!--    <tr>-->
 <!--      <th>Title</th>-->
       <!--<th>Content</th>-->
+<<<<<<< HEAD
 <!--      <th colspan="3"></th>-->
 <!--    </tr>-->
 <!--  </thead>-->
@@ -87,3 +88,26 @@
 
 
 <!--<a href="" class="download">Download</a>-->
+=======
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <!--<td><%#= post.content %></td>-->
+        <td><%= post.user.email %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+>>>>>>> ea371b610319812961fec04ad8a7bd648e3e5e13
